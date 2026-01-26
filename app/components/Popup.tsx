@@ -53,8 +53,7 @@ export default function Popup() {
       .then((res) => res.json())
       .then((data) => {
         setConfig(data);
-        // setIsCasinoTime(checkCasinoTime());
-        setIsCasinoTime(true); // Uvijek prikaži casino reklamu za testiranje
+        setIsCasinoTime(checkCasinoTime());
       })
       .catch((err) => console.error('Error loading popup config:', err));
 
@@ -77,11 +76,10 @@ export default function Popup() {
 
   if (!config || !isVisible) return null;
 
-  const activeConfig = isCasinoTime && config.casino.enabled 
-    ? config.casino 
-    : config.alternative;
+  // Prikaži samo casino reklamu od 23h do 06h
+  if (!isCasinoTime || !config.casino.enabled) return null;
 
-  if (!activeConfig.enabled) return null;
+  const activeConfig = config.casino;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
@@ -133,7 +131,7 @@ export default function Popup() {
           
           {/* Image */}
           {activeConfig.image && (
-            <div className="mb-4 rounded-lg overflow-hidden relative w-full h-64">
+            <div className="mb-6 rounded-lg overflow-hidden relative w-full h-64">
               <Image
                 src={activeConfig.image}
                 alt={activeConfig.title}
@@ -143,9 +141,6 @@ export default function Popup() {
               />
             </div>
           )}
-          <p className="text-gray-600 mb-6">
-            {activeConfig.text}
-          </p>
           
           {/* CTA Button */}
           <a
