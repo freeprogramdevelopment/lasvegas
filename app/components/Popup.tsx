@@ -41,19 +41,20 @@ export default function Popup() {
 
   useEffect(() => {
     // Provjeri da li je korisnik već zatvorio popup danas
-    const today = new Date().toDateString();
-    const closedToday = localStorage.getItem('popupClosed');
-    
-    if (closedToday === today) {
-      return; // Ne prikazuj popup ako je već zatvoren danas
-    }
+    // const today = new Date().toDateString();
+    // const closedToday = localStorage.getItem('popupClosed');
+    // 
+    // if (closedToday === today) {
+    //   return; // Ne prikazuj popup ako je već zatvoren danas
+    // }
 
     // Učitaj konfiguraciju
     fetch('/popup-config.json')
       .then((res) => res.json())
       .then((data) => {
         setConfig(data);
-        setIsCasinoTime(checkCasinoTime());
+        // setIsCasinoTime(checkCasinoTime());
+        setIsCasinoTime(true); // Uvijek prikaži casino reklamu za testiranje
       })
       .catch((err) => console.error('Error loading popup config:', err));
 
@@ -68,10 +69,10 @@ export default function Popup() {
   const handleClose = () => {
     setIsVisible(false);
     // Spremi da je popup zatvoren danas
-    if (typeof window !== 'undefined') {
-      const today = new Date().toDateString();
-      localStorage.setItem('popupClosed', today);
-    }
+    // if (typeof window !== 'undefined') {
+    //   const today = new Date().toDateString();
+    //   localStorage.setItem('popupClosed', today);
+    // }
   };
 
   if (!config || !isVisible) return null;
