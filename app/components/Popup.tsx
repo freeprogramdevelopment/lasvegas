@@ -65,34 +65,6 @@ export default function Popup() {
     return () => clearTimeout(timer);
   }, []);
 
-  // Blokiraj scroll na body kada je popup vidljiv
-  useEffect(() => {
-    if (isVisible && config) {
-      const activeConfig = isCasinoTime && config.casino.enabled 
-        ? config.casino 
-        : config.alternative;
-      
-      if (activeConfig.enabled) {
-        // Spremi originalni scroll position
-        const scrollY = window.scrollY;
-        // Blokiraj scroll
-        document.body.style.position = 'fixed';
-        document.body.style.top = `-${scrollY}px`;
-        document.body.style.width = '100%';
-        document.body.style.overflow = 'hidden';
-        
-        return () => {
-          // Vrati scroll kada se popup zatvori
-          document.body.style.position = '';
-          document.body.style.top = '';
-          document.body.style.width = '';
-          document.body.style.overflow = '';
-          window.scrollTo(0, scrollY);
-        };
-      }
-    }
-  }, [isVisible, config, isCasinoTime]);
-
   const handleClose = () => {
     setIsVisible(false);
     // Spremi da je popup zatvoren danas
@@ -111,31 +83,15 @@ export default function Popup() {
   if (!activeConfig.enabled) return null;
 
   return (
-    <div 
-      className="fixed inset-0 z-50 flex items-center justify-center p-4"
-      style={{ 
-        overscrollBehavior: 'none',
-        touchAction: 'none',
-        WebkitOverflowScrolling: 'auto'
-      }}
-    >
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       {/* Zatamnjena pozadina */}
       <div 
         className="absolute inset-0 bg-black/70 backdrop-blur-sm"
         onClick={handleClose}
-        style={{ touchAction: 'none' }}
       />
       
       {/* Popup content */}
-      <div 
-        className="relative bg-white rounded-lg shadow-2xl max-w-md w-full p-6 md:p-8 animate-in fade-in zoom-in duration-300 overflow-hidden"
-        style={{ 
-          maxHeight: '90vh',
-          overflowY: 'auto',
-          overscrollBehavior: 'contain',
-          touchAction: 'pan-y'
-        }}
-      >
+      <div className="relative bg-white rounded-lg shadow-2xl max-w-md w-full p-6 md:p-8 animate-in fade-in zoom-in duration-300">
         {/* X button */}
         <button
           onClick={handleClose}
