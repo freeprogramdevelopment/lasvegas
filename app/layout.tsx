@@ -36,31 +36,6 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         {children}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                if (typeof window !== 'undefined' && /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-                  // Sakrij URL bar na mobilnim uređajima
-                  setTimeout(function() {
-                    window.scrollTo(0, 1);
-                  }, 0);
-                  
-                  // Ponovi nakon resize-a (kada se URL bar sakrije/prikaže)
-                  let lastHeight = window.innerHeight;
-                  window.addEventListener('resize', function() {
-                    if (window.innerHeight !== lastHeight) {
-                      lastHeight = window.innerHeight;
-                      setTimeout(function() {
-                        window.scrollTo(0, 1);
-                      }, 100);
-                    }
-                  });
-                }
-              })();
-            `,
-          }}
-        />
       </body>
     </html>
   );
