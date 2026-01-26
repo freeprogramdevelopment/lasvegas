@@ -4,7 +4,7 @@ import Popup from "./components/Popup";
 export default function Home() {
   return (
     <>
-      <div className="relative w-full h-screen overflow-hidden">
+      <div className="relative w-full overflow-hidden" style={{ height: '100dvh' }}>
         {/* Hidden H1 for SEO */}
         <h1 className="sr-only">Las Vegas - Entertainment Capital of the World</h1>
         
