@@ -6,12 +6,12 @@ export default function Home() {
     <>
       <div className="relative w-full overflow-hidden" style={{ height: '100dvh' }}>
         {/* Hidden H1 for SEO */}
-        <h1 className="sr-only">Las Vegas - Entertainment Capital of the World</h1>
+        <h1 className="sr-only">Las Vegas</h1>
         
         {/* Desktop image - hidden on mobile */}
         <Image
           src="/las.png"
-          alt="Las Vegas street scene with neon lights, casinos, and iconic landmarks at sunset"
+          alt="Vegas.hr - Online Casino s najboljim igrama i jackpotima"
           fill
           priority
           className="hidden md:block object-cover"
@@ -22,7 +22,7 @@ export default function Home() {
         {/* Mobile image - visible only on mobile */}
         <Image
           src="/lasvegas1.png"
-          alt="Las Vegas street scene with neon lights, casinos, and iconic landmarks at sunset"
+          alt="Vegas.hr - Online Casino s najboljim igrama i jackpotima"
           fill
           priority
           className="block md:hidden object-cover"
