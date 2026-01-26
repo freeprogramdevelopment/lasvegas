@@ -1,0 +1,20 @@
+{
+  "casino": {
+    "enabled": true,
+    "title": "vegas.hr",
+    "text": "Doživite uzbuđenje najboljih casino igara! Ekskluzivni bonus za nove igrače i najveći jackpoti čekaju vas. Pridružite se tisućama zadovoljnih igrača već danas!",
+    "ctaText": "Posjeti Vegas.hr",
+    "ctaUrl": "https://vegas.hr/",
+    "buttonColor": "#FFD700",
+    "buttonGradient": true,
+    "image": "/vegas.jpeg"
+  },
+  "alternative": {
+    "enabled": true,
+    "title": "Specijalna ponuda",
+    "text": "Provjeri našu ekskluzivnu ponudu!",
+    "ctaText": "Saznaj više",
+    "ctaUrl": "#",
+    "buttonColor": "#4A90E2"
+  }
+}
