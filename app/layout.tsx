@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Las Vegas",
   description: "Pronađi online casino s najboljim bonusima i promocijama: cashback, rakeback, free spinovi i VIP pogodnosti. Provjeri uvjete i igraj pametno.",
-  keywords: "vegas.hr, online casino, casino hrvatska, casino igre, jackpot, bonus, kockanje, slotovi, rulet, blackjack, poker",
+  keywords: "vegas, online casino, casino hrvatska, casino igre, jackpot, bonus, kockanje, slotovi, rulet, blackjack, poker",
   openGraph: {
     title: "Las Vegas",
     description: "Pronađi online casino s najboljim bonusima i promocijama: cashback, rakeback, free spinovi i VIP pogodnosti. Provjeri uvjete i igraj pametno.",

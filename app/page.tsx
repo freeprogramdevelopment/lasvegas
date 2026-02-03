@@ -11,7 +11,7 @@ export default function Home() {
         {/* Desktop image - hidden on mobile */}
         <Image
           src="/las.png"
-          alt="Vegas.hr - Online Casino s najboljim igrama i jackpotima"
+          alt="Las Vegas Online Casino s najboljim igrama i jackpotima"
           fill
           priority
           className="hidden md:block object-cover"
@@ -22,7 +22,7 @@ export default function Home() {
         {/* Mobile image - visible only on mobile */}
         <Image
           src="/lasvegas1.png"
-          alt="Vegas.hr - Online Casino s najboljim igrama i jackpotima"
+          alt="Las Vegas - Online Casino s najboljim igrama i jackpotima"
           fill
           priority
           className="block md:hidden object-cover"
