@@ -14,11 +14,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Las Vegas",
-  description: "Otkrijte uzbuđenje najboljih online casino igara na Vegas.hr! Ekskluzivni bonus za nove igrače, najveći jackpoti i tisuće zadovoljnih igrača. Pridružite se već danas!",
+  description: "Pronađi online casino s najboljim bonusima i promocijama: cashback, rakeback, free spinovi i VIP pogodnosti. Provjeri uvjete i igraj pametno.",
   keywords: "vegas.hr, online casino, casino hrvatska, casino igre, jackpot, bonus, kockanje, slotovi, rulet, blackjack, poker",
   openGraph: {
     title: "Las Vegas",
-    description: "Otkrijte uzbuđenje najboljih online casino igara na Vegas.hr! Ekskluzivni bonus za nove igrače, najveći jackpoti i tisuće zadovoljnih igrača.",
+    description: "Pronađi online casino s najboljim bonusima i promocijama: cashback, rakeback, free spinovi i VIP pogodnosti. Provjeri uvjete i igraj pametno.",
     type: "website",
     url: "https://vegas.hr",
     siteName: "Las Vegas",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Las Vegas",
-    description: "Otkrijte uzbuđenje najboljih online casino igara na Vegas.hr!",
+    description: "Pronađi online casino s najboljim bonusima i promocijama: cashback, rakeback, free spinovi i VIP pogodnosti. Provjeri uvjete i igraj pametno.",
     images: ["/vegas.jpeg"],
   },
   viewport: "width=device-width, initial-scale=1",
