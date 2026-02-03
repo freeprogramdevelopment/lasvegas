@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: "Las Vegas",
     description: "Pronađi online casino s najboljim bonusima i promocijama: cashback, rakeback, free spinovi i VIP pogodnosti. Provjeri uvjete i igraj pametno.",
     type: "website",
-    url: "https://vegas.hr",
+    url: "https://lasvegas.hr",
     siteName: "Las Vegas",
     images: [
       {
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   viewport: "width=device-width, initial-scale=1",
   robots: "index, follow",
   alternates: {
-    canonical: "https://vegas.hr",
+    canonical: "https://lasvegas.hr",
   },
 };
 

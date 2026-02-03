@@ -131,7 +131,7 @@ export default function Popup() {
           
           {/* Image */}
           {activeConfig.image && (
-            <div className="mb-6 rounded-lg overflow-hidden relative w-full h-64">
+            <div className="mb-4 rounded-lg overflow-hidden relative w-full h-64">
               <Image
                 src={activeConfig.image}
                 alt={activeConfig.title}
@@ -141,6 +141,10 @@ export default function Popup() {
               />
             </div>
           )}
+          
+          <p className="text-gray-600 mb-6">
+            {activeConfig.text}
+          </p>
           
           {/* CTA Button */}
           <a
