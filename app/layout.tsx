@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     siteName: "Las Vegas",
     images: [
       {
-        url: "/vegas.jpeg",
+        url: "/las.png",
         width: 1200,
         height: 630,
         alt: "Las Vegas",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Las Vegas",
     description: "Pronađi online casino s najboljim bonusima i promocijama: cashback, rakeback, free spinovi i VIP pogodnosti. Provjeri uvjete i igraj pametno.",
-    images: ["/vegas.jpeg"],
+    images: ["/las.png"],
   },
   viewport: "width=device-width, initial-scale=1",
   robots: "index, follow",
