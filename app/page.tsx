@@ -14,7 +14,7 @@ export default function Home() {
           alt="Las Vegas Online Casino s najboljim igrama i jackpotima"
           fill
           priority
-          className="hidden md:block object-cover"
+          className="hidden md:block object-fill"
           quality={90}
           sizes="100vw"
         />
@@ -25,7 +25,7 @@ export default function Home() {
           alt="Las Vegas - Online Casino s najboljim igrama i jackpotima"
           fill
           priority
-          className="block md:hidden object-cover"
+          className="block md:hidden object-fill"
           quality={90}
           sizes="100vw"
         />
